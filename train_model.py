@@ -14,7 +14,7 @@ mlflow.set_experiment(experiment_id="559978265238575036")
 print("getting tracking uri")
 print(mlflow.get_tracking_uri())
 print("setting artifact uri")
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_tracking_uri("http://127.0.0.1:5001")
 mlflow.autolog()
 with mlflow.start_run():
     model = RandomForestClassifier()
