@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from scipy.stats import zscore
 
 # Load data
-liverdisease_tbl = pd.read_csv('D:/Mtech/Semester3/MLOPS/Assignment/mlops_assignment_1_group_56/sampledatasets/liver_disease_1.csv')
+liverdisease_tbl = pd.read_csv('/home/runner/work/mlops_assignment_1_group_56/sampledatasets/liver_disease_1.csv')
 #Printing first 2 rows of the dataset
 # print(forest_tbl.iloc[:2])
 liverdisease_tbl.head(2)
