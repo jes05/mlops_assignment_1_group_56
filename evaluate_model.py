@@ -5,8 +5,9 @@ import mlflow
 
 test_path = 'test_output'
 output_path = 'final_output'
-mlflow.set_experiment('assignment_mlops_experiments')
+mlflow.set_experiment(experiment_id="559978265238575036")
 print(mlflow.get_tracking_uri())
+mlflow.autolog()
 
 # Load test data and model
 X_test = pd.read_csv(test_path+'/X_test.csv')
