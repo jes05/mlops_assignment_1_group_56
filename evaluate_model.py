@@ -6,7 +6,7 @@ import mlflow
 test_path = 'test_output'
 output_path = 'final_output'
 mlflow.set_experiment(experiment_id="559978265238575036")
-
+mlflow.set_tracking_uri('http://127.0.0.1:5000/')
 mlflow.autolog()
 
 
