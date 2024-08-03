@@ -1,6 +1,7 @@
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from joblib import load
 import pandas as pd
+import mlflow
 
 test_path = 'test_output'
 output_path = 'final_output'
@@ -17,6 +18,10 @@ model = load('models/model.joblib')
 # Make predictions
 y_pred = model.predict(X_test)
 print(y_pred)
+with mlflow.start_run() as run:
+    accuracy = accuracy_score(y_pred, model.predict(X_test))
+    mlflow.log_metric('accuracy', accuracy)
+    mlflow.log_param('n_estimators', model.n_estimators)
 # Convert y_pred to DataFrame
 y_pred_df = pd.DataFrame(y_pred, columns=['Prediction'])
 
