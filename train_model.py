@@ -21,4 +21,4 @@ X_test.to_csv(output_file_path+'/X_test.csv')
 y_test.to_csv(output_file_path+'/Y_test.csv')
 
 # Save the model
-dump(model, '/home/runner/work/mlops_assignment_1_group_56/models/model.joblib')
+dump(model, 'models/model.joblib')
