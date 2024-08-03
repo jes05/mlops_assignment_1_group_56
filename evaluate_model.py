@@ -2,8 +2,8 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from joblib import load
 import pandas as pd
 
-test_path = '/home/runner/work/mlops_assignment_1_group_56/test_output'
-output_path = '/home/runner/work/mlops_assignment_1_group_56/output'
+test_path = 'test_output'
+output_path = 'output'
 
 # Load test data and model
 X_test = pd.read_csv(test_path+'/X_test.csv')
@@ -12,7 +12,7 @@ X_test = pd.read_csv(test_path+'/X_test.csv')
 if 'Unnamed: 0' in X_test.columns:
     X_test = X_test.drop(columns=['Unnamed: 0'])
 
-model = load('D:/Mtech/Semester3/MLOPS/Assignment/mlops_assignment_1_group_56/models/model.joblib')
+model = load('models/model.joblib')
 
 # Make predictions
 y_pred = model.predict(X_test)
