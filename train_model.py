@@ -11,7 +11,7 @@ file_path = 'train_output'
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
 # Set up MLflow tracking
 mlflow.set_experiment('assignment_mlops_experiments')
-
+print(mlflow.get_tracking_uri())
 with mlflow.start_run():
     model = RandomForestClassifier()
     model.fit(X_train, y_train)
