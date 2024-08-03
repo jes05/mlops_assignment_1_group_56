@@ -3,7 +3,7 @@ from joblib import load
 import pandas as pd
 
 test_path = 'test_output'
-output_path = 'output'
+output_path = 'final_output'
 
 # Load test data and model
 X_test = pd.read_csv(test_path+'/X_test.csv')
@@ -25,4 +25,5 @@ combined_df = pd.concat([X_test, y_pred_df], axis=1)
 print(combined_df)
 # Save the combined DataFrame to a CSV file
 combined_df.to_csv(output_path+'/final_predicted_output.csv', index=False)
+combined_df.to_csv('output/final_predicted_output.csv', index=False)
 
