@@ -28,7 +28,11 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover
-
+        
+    - name: Train model
+      run: |
+        python train_model.py
+        
     - name: Evaluate model
       run: |
         python evaluate_model.py
