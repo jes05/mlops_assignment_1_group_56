@@ -14,7 +14,7 @@ mlflow.set_experiment(experiment_id="559978265238575036")
 print("getting tracking uri")
 print(mlflow.get_tracking_uri())
 print("setting artifact uri")
-mlflow.set_tracking_uri("https://github.com/jes05/mlops_assignment_1_group_56/tree/51185fb1b11352f931a6456bfb0f32fa9cd7864e/mlruns")
+mlflow.set_tracking_uri("https://github.com/jes05/mlops_assignment_1_group_56.git")
 mlflow.autolog()
 with mlflow.start_run():
     model = RandomForestClassifier()
