@@ -10,7 +10,7 @@ y = data_preprocessing.y
 file_path = 'train_output'
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.8, random_state=42)
 # Set up MLflow tracking
-mlflow.set_experiment(experiment_id="559978265238575036")
+mlflow.set_experiment("default")
 print("getting tracking uri")
 print(mlflow.get_tracking_uri())
 print("setting artifact uri")
