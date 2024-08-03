@@ -7,7 +7,9 @@ test_path = 'test_output'
 output_path = 'final_output'
 mlflow.set_experiment(experiment_id="559978265238575036")
 print(mlflow.get_tracking_uri())
+mlflow.set_tracking_uri("https://github.com/jes05/mlops_assignment_1_group_56/tree/51185fb1b11352f931a6456bfb0f32fa9cd7864e/mlruns")
 mlflow.autolog()
+
 
 # Load test data and model
 X_test = pd.read_csv(test_path+'/X_test.csv')
