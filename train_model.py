@@ -42,3 +42,4 @@ y_test.to_csv(output_file_path+'/Y_test.csv')
 
 # Save the model
 dump(model, 'models/model.joblib')
+print("Test for branching")
