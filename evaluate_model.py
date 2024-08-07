@@ -5,9 +5,9 @@ import mlflow
 
 test_path = 'test_output'
 output_path = 'final_output'
-mlflow.set_experiment(experiment_id="559978265238575036")
-mlflow.set_tracking_uri('http://127.0.0.1:5000/')
-mlflow.autolog()
+#mlflow.set_experiment(experiment_id="559978265238575036")
+#mlflow.set_tracking_uri('http://127.0.0.1:5000/')
+#mlflow.autolog()
 
 
 # Load test data and model
@@ -22,10 +22,10 @@ model = load('models/model.joblib')
 # Make predictions
 y_pred = model.predict(X_test)
 print(y_pred)
-with mlflow.start_run() as run:
+"""with mlflow.start_run() as run:
     accuracy = accuracy_score(y_pred, model.predict(X_test))
     mlflow.log_metric('accuracy', accuracy)
-    mlflow.log_param('n_estimators', model.n_estimators)
+    mlflow.log_param('n_estimators', model.n_estimators) """
 # Convert y_pred to DataFrame
 y_pred_df = pd.DataFrame(y_pred, columns=['Prediction'])
 
